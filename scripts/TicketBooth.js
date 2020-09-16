@@ -11,17 +11,16 @@ eventHub.addEventListener("click", clickEvent => {
 export const ticketBooth = () => {
     contentTarget.innerHTML = `
     <div class="ticketBooth">
-    <button id=""></button>
-    <button id=""></button>
-    <button id=""></button>
-    <button id=""></button>
+    <button id="food-ticket"></button>
+    <button id="game-ticket"></button>
+    <button id="ride-ticket"></button>
+    <button id="sideshow-ticket"></button>
     </div>
     `
 };
 
-
+/*
 const rideEvent = new CustomEvent("rideTicketPurchased");
-
 const flowerSelectedEvent = new CustomEvent("flowerSelected", {
     detail: {
         selectedFlower: "Daisy"
@@ -29,7 +28,7 @@ const flowerSelectedEvent = new CustomEvent("flowerSelected", {
 });
 
 eventHub.addEventListener("click", clickEvent => {
-
     const userChoiceElement = document.querySelector(".main")
     userChoiceElement.innerHTML = clickEvent.detail.selectedFlower
 });
+*/
