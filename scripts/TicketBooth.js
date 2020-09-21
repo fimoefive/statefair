@@ -15,6 +15,7 @@ export const ticketBooth = () => {
     <button id="game-ticket"></button>
     <button id="ride-ticket"></button>
     <button id="sideshow-ticket"></button>
+    <button id="fullPackage-ticket"></button>
     </div>
     `
 };
