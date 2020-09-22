@@ -7,8 +7,7 @@ eventHub.addEventListener("rideTicket", CustomEvent => {
 
 export const rideTicketHolder = () => {
         eventHub.addEventListener("rideTicket", clickEvent => {
-        return contentTarget.innerHTML = `
-        <div></div>
+        return contentTarget.innerHTML = `<div></div>
         `
         })
 };

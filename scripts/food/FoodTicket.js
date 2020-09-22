@@ -3,12 +3,11 @@ const eventHub = document.querySelector(".main");
 
 eventHub.addEventListener
 ("foodTicket", clickEvent => {
-    return contentTarget.innerHTML = <div class="foods"></div>
+    return contentTarget.innerHTML = `<div class="foods"></div>`
 })
 
 export const foodTicketHolder = () => {
     eventHub.addEventListener("foodTicket", clickEvent => {
-        
         return contentTarget.innerHTML = `
         <div></div>
         `
