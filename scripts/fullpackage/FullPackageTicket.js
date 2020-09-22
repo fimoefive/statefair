@@ -8,10 +8,10 @@ const eventHub = document.querySelector(".state-fair");
 
 export const fullPackageTicketHolder = () => {
     eventHub.addEventListener("fullPackageTicketPurchased", clickEvent => {
-        contentTargetGame.innerHTML += `<div class="game">game</div>`
-        contentTargetFood.innerHTML += `<div class="food">food</div>`
-        contentTargetRide.innerHTML += `<div class="rides">ride</div>`
-        contentTargetSideShow.innerHTML += `<div class="side-show">sideshow</div>`
+        contentTargetGame.innerHTML += `<div class="game">games</div>`
+        contentTargetFood.innerHTML += `<div class="food">foods</div>`
+        contentTargetRide.innerHTML += `<div class="rides">rides</div>`
+        contentTargetSideShow.innerHTML += `<div class="side-shows">sideshow</div>`
     contentTargetFull.innerHTML += `<div class="full-package">full package</div>`
     })
 };

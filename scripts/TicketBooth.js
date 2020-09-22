@@ -59,9 +59,9 @@ export const ticketBooth = () => {
     totalTickets();
     return contentTarget.innerHTML = `
     <div class="ticketBooth">
-    <button id="foodTicket">Food Ticket</button>
-    <button id="gameTicket">Game Ticket</button>
     <button id="rideTicket">Ride Ticket</button>
+    <button id="foodTicket">Food Ticket</button>
+    <button id="gameTicket">Game Ticket</button>x
     <button id="sideshowTicket">SideShow Ticket</button>
     <button id="fullPackageTicket">Full Package Ticket</button>
     </div>

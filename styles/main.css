@@ -39,19 +39,19 @@ h1,h2,h3,h4,h5,h6 {
     width: 1rem;
     margin: 0.2rem 0.2rem;
 }
-.eater {
+.food {
     background-color: fuchsia;
 }
-.rider {
+.rides {
     background-color: dodgerblue;
 }
-.bigSpender {
+.full-package {
     background-color: orange;
 }
-.player {
+.game {
     background-color: lawngreen;
 }
-.gawker {
+.side-show {
     background-color: firebrick;
 }
 .customers {

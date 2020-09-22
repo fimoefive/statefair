@@ -6,7 +6,7 @@ const eventHub = document.querySelector(".state-fair");
 export const foodTicketHolder = () => {
     eventHub.addEventListener("foodTicketPurchased", clickEvent => {
         contentTargetFood.innerHTML += `
-        <div class="food">foods</div>
+        <div class="food">food</div>
         `
     })
 };
