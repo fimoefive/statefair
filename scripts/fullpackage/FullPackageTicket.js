@@ -1,8 +1,8 @@
-const contentTarget = document.querySelector(".full-package");
-const contentTarget = document.querySelector(".game");
-const contentTarget = document.querySelector(".food");
-const contentTarget = document.querySelector(".rides");
-const contentTarget = document.querySelector(".side-show");
+const contentTargetFull = document.querySelector(".full-package");
+const contentTargetGame = document.querySelector(".game");
+const contentTargetFood = document.querySelector(".food");
+const contentTargetRide = document.querySelector(".rides");
+const contentTargetSideShow = document.querySelector(".side-show");
 const eventHub = document.querySelector(".state-fair");
 
 
@@ -10,12 +10,10 @@ const eventHub = document.querySelector(".state-fair");
 
 export const fullPackageTicketHolder = () => {
     eventHub.addEventListener("fullPackageTicket", clickEvent => {
-        return contentTarget.innerHTML += `
-        <div class="game"></div>
-        <div class="food"></div>
-        <div class="rides"></div>
-        <div class="side-show"></div>
-        <div class="full-package></div>
-        `
+        contentTargetGame.innerHTML += `<div class="game"></div>`
+        contentTargetFood.innerHTML += `<div class="food"></div>`
+        contentTargetRide.innerHTML += `<div class="rides"></div>`
+        contentTargetSideShow.innerHTML += `<div class="side-show"></div>`
+        contentTargetFull.innerHTML += `<div class="full-package></div>`
     })
 };

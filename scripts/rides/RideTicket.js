@@ -1,11 +1,11 @@
-const contentTarget = document.querySelector(".rides");
+const contentTargetRide = document.querySelector(".rides");
 const eventHub = document.querySelector(".state-fair");
 
-eventHub.addEventListener("rideTicket", clickEvent => {
+eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id === "rideSelected") {
         const rideEvent = new CustomEvent("rideTicketPurchased", {
                 detail: {
-                        rideTicket: clickEvent.target.id
+                        ticketPurchased: clickEvent.target.value
                 }
         })
 
@@ -14,8 +14,8 @@ eventHub.addEventListener("rideTicket", clickEvent => {
 })
 
 export const rideTicketHolder = () => {
-        eventHub.addEventListener("rideTicket", clickEvent => {
-        return contentTarget.innerHTML += `<div class="rides"></div>
+        eventHub.addEventListener("rideTicket", rideEvent => {
+        return contentTargetRide.innerHTML += `<div class="rides"></div>
         `
         })
 };

@@ -1,15 +1,21 @@
-const contentTarget = document.querySelector(".game");
+const contentTargetGame = document.querySelector(".game");
 const eventHub = document.querySelector(".state-fair");
 
-eventHub.addEventListener("gameTicket", clickEvent => {
-    return contentTarget.innerHTML += ` 
-        <div class="player></div>`
-    }) 
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "gameTicket") {
+        const gameEvent = new CustomEvent("gameTicketPurchased", {
+            detail: {
+                ticketPurchased: clickEvent.target.value
+            }
+        })
+        eventHub.dispatchEvent(gameEvent);
+    }
+}) 
     
 export const gameTicketHolder = () => {
 eventHub.addEventListener
-    ("gameTicket", clickEvent
+    ("gameTicket", gameEvent
     => {
-        return contentTarget.innerHTML += `<div class="game"></div>`
+        return contentTargetGame.innerHTML += `<div class="game"></div>`
     })
 };
