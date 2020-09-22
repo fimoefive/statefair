@@ -9,6 +9,6 @@ eventHub.addEventListener
 export const sideshowTicketHolder = () => {
     eventHub.addEventListener("sideshowTicket", clickEvent => {
         return contentTarget.innerHTML = `
-        <div></div>`
+        <div>sideshow</div>`
     })
 };

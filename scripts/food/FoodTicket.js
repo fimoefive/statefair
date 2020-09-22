@@ -9,7 +9,7 @@ eventHub.addEventListener
 export const foodTicketHolder = () => {
     eventHub.addEventListener("foodTicket", clickEvent => {
         return contentTarget.innerHTML = `
-        <div></div>
+        <div>foods</div>
         `
     })
 };

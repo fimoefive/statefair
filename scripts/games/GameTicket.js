@@ -10,6 +10,6 @@ export const gameTicketHolder = () => {
 eventHub.addEventListener
     ("gameTicket", clickEvent
     => {
-        return contentTarget.innerHTML = `<div></div>`
+        return contentTarget.innerHTML = `<div>player</div>`
     })
 };
