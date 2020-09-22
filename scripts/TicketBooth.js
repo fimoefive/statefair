@@ -1,4 +1,6 @@
+let totalTicketSold = 0;
 
+const contentTargetTickets = document.querySelector(".customers");
 const contentTarget = document.querySelector(".entry");
 const eventHub = document.querySelector(".state-fair");
 
@@ -14,6 +16,7 @@ eventHub.addEventListener("ticketSelected", clickEvent => {
 });
 
 export const ticketBooth = () => {
+    totalTickets();
     return contentTarget.innerHTML = `
     <div class="ticketBooth">
     <button id="foodTicket">Food Ticket</button>
@@ -23,4 +26,8 @@ export const ticketBooth = () => {
     <button id="fullPackageTicket">Full Package Ticket</button>
     </div>
     `
+};
+
+const totalTickets = () => {
+    contentTargetTickets.innerHTML += `Total tickets purchased: ${totalTicketSold}`
 };
