@@ -5,17 +5,6 @@ const contentTargetRide = document.querySelector(".rides");
 const contentTargetSideShow = document.querySelector(".side-show");
 const eventHub = document.querySelector(".state-fair");
 
-eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "fullPackageTicket") {
-        const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased", {
-            detail: {
-                ticketPurchased: clickEvent.target.value
-            }
-        })
-        eventHub.dispatchEvent(fullPackageEvent);
-    }
-})
-
 
 export const fullPackageTicketHolder = () => {
     eventHub.addEventListener("fullPackageTicketPurchased", clickEvent => {

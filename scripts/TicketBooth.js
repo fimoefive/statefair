@@ -4,16 +4,56 @@ const contentTargetTickets = document.querySelector(".customers");
 const contentTarget = document.querySelector(".entry");
 const eventHub = document.querySelector(".state-fair");
 
-eventHub.addEventListener("ticketSelected", clickEvent => {
-    if (clickEvent.target.selectedTicket === "ticketSelected") {
-    const ticketEvent = new CustomEvent ("ticketPurchased", {
-        detail: {
-            ticketPurchased: clickEvent.target.value
-        }
-    })
-    eventHub.dispatchEvent(ticketEvent);
+
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "fullPackageTicket") {
+        const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased")
+            totalTicketSold++
+            totalTickets();
+         
+        
+        eventHub.dispatchEvent(fullPackageEvent);
     }
-});
+})
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "foodTicket") {
+        const foodEvent = new CustomEvent("foodTicketPurchased")
+            totalTicketSold++
+            totalTickets();
+
+        eventHub.dispatchEvent(foodEvent);
+    }
+})
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "gameTicket") {
+        const gameEvent = new CustomEvent("gameTicketPurchased")
+        totalTicketSold++
+        totalTickets();
+        eventHub.dispatchEvent(gameEvent);
+    }
+}) 
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "rideTicket") {
+    const rideEvent = new CustomEvent("rideTicketPurchased")
+            
+    
+    eventHub.dispatchEvent(rideEvent); 
+    }       
+})
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "sideshowTicket") {
+        const sideshowEvent = new CustomEvent("sideshowTicketPurchased")
+        totalTicketSold++
+        totalTickets();
+
+        eventHub.dispatchEvent(sideshowEvent);
+    }
+})
 
 export const ticketBooth = () => {
     totalTickets();
@@ -28,6 +68,6 @@ export const ticketBooth = () => {
     `
 };
 
-const totalTickets = () => {
-    contentTargetTickets.innerHTML += `Total tickets purchased: ${totalTicketSold}`
+export const totalTickets = () => {
+contentTargetTickets.innerHTML = `Total tickets purchased: ${totalTicketSold}`
 };
