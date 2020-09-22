@@ -1,5 +1,5 @@
 const contentTarget = document.querySelector(".game");
-const eventHub = document.querySelector(".main");
+const eventHub = document.querySelector(".state-fair");
 
 eventHub.addEventListener("gameTicket", clickEvent => {
     return contentTarget.innerHTML += ` 
@@ -10,6 +10,6 @@ export const gameTicketHolder = () => {
 eventHub.addEventListener
     ("gameTicket", clickEvent
     => {
-        return contentTarget.innerHTML = `<div>player</div>`
+        return contentTarget.innerHTML += `<div class="game"></div>`
     })
 };

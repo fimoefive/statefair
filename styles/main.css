@@ -18,3 +18,33 @@ h1,h2,h3,h4,h5,h6 {
 .ticketBooth {
     margin-bottom: 1rem;
 }
+.people {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 25rem;
+}
+
+.person {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.2rem 0.2rem;
+}
+
+.eater {
+    background-color: fuchsia;
+}
+
+.rider {
+    background-color: dodgerblue;
+}
+.player {
+    background-color: lawngreen;
+}
+.sideshow {
+    background-color: firebrick;
+}
+.customers {
+    font-weight: 700;
+    padding: 1rem;
+}

@@ -1,21 +1,25 @@
 
 const contentTarget = document.querySelector(".entry");
-const eventHub = document.querySelector(".main");
+const eventHub = document.querySelector(".state-fair");
 
-eventHub.addEventListener("click", clickEvent => {
-
-    const userChoiceElement = document.querySelector(".main")
-    userChoiceElement.innerHTML = clickEvent.detail.selectedFlower
-});
+eventHub.addEventListener("ticketSelected", clickEvent => {
+    if (clickEvent.target.selectedTicket === "ticketSelected") {
+    const ticketEvent = new CustomEvent ("ticketPurchased", {
+        detail: {
+            ticketPurchased: clickEvent.target.selectedticket
+        }
+    })
+    eventHub.dispatchEvent(ticketEvent);
+    }
 
 export const ticketBooth = () => {
-    contentTarget.innerHTML = `
+    return contentTarget.innerHTML = `
     <div class="ticketBooth">
-    <button id="food-ticket"></button>
-    <button id="game-ticket"></button>
-    <button id="ride-ticket"></button>
-    <button id="sideshow-ticket"></button>
-    <button id="fullPackage-ticket"></button>
+    <button id="foodTicket">Food Ticket</button>
+    <button id="gameTicket">Game Ticket</button>
+    <button id="rideTicket">Ride Ticket</button>
+    <button id="sideshowTicket">SideShow Ticket</button>
+    <button id="fullPackageTicket">Full Package Ticket</button>
     </div>
     `
 };
@@ -26,10 +30,5 @@ const flowerSelectedEvent = new CustomEvent("flowerSelected", {
     detail: {
         selectedFlower: "Daisy"
     }
-});
-
-eventHub.addEventListener("click", clickEvent => {
-    const userChoiceElement = document.querySelector(".main")
-    userChoiceElement.innerHTML = clickEvent.detail.selectedFlower
 });
 */

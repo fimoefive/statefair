@@ -1,5 +1,5 @@
 const contentTarget = document.querySelector(".food");
-const eventHub = document.querySelector(".main");
+const eventHub = document.querySelector(".state-fair");
 
 eventHub.addEventListener
 ("foodTicket", clickEvent => {
@@ -8,8 +8,8 @@ eventHub.addEventListener
 
 export const foodTicketHolder = () => {
     eventHub.addEventListener("foodTicket", clickEvent => {
-        return contentTarget.innerHTML = `
-        <div>foods</div>
+        return contentTarget.innerHTML += `
+        <div class="food"></div>
         `
     })
 };
