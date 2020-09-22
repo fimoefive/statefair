@@ -11,6 +11,7 @@ eventHub.addEventListener("ticketSelected", clickEvent => {
     })
     eventHub.dispatchEvent(ticketEvent);
     }
+});
 
 export const ticketBooth = () => {
     return contentTarget.innerHTML = `
@@ -23,12 +24,3 @@ export const ticketBooth = () => {
     </div>
     `
 };
-
-/*
-const rideEvent = new CustomEvent("rideTicketPurchased");
-const flowerSelectedEvent = new CustomEvent("flowerSelected", {
-    detail: {
-        selectedFlower: "Daisy"
-    }
-});
-*/
