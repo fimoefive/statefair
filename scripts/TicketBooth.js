@@ -8,7 +8,7 @@ eventHub.addEventListener("ticketSelected", clickEvent => {
     if (clickEvent.target.selectedTicket === "ticketSelected") {
     const ticketEvent = new CustomEvent ("ticketPurchased", {
         detail: {
-            ticketPurchased: clickEvent.target.selectedticket
+            ticketPurchased: clickEvent.target.value
         }
     })
     eventHub.dispatchEvent(ticketEvent);

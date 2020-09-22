@@ -3,7 +3,7 @@ const eventHub = document.querySelector(".state-fair");
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "sideshowTicket") {
-        const sideshowEvent = new  CustomEvent("sideshowTicketPurchased", {
+        const sideshowEvent = new CustomEvent("sideshowTicketPurchased", {
             detail: {
                 ticketPurchased: clickEvent.target.value
             }
@@ -13,8 +13,8 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 export const sideshowTicketHolder = () => {
-    eventHub.addEventListener("sideshowTicket", clickEvent => {
+    eventHub.addEventListener("sideshowTicketPurchased", clickEvent => {
         return contentTargetSideShow.innerHTML += `
-        <div class="side-show"></div>`
+        <div class="side-show">sideshow</div>`
     })
 };

@@ -13,9 +13,9 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 export const foodTicketHolder = () => {
-    eventHub.addEventListener("foodTicket", clickEvent => {
-        return contentTargetFood.innerHTML += `
-        <div class="food"></div>
+    eventHub.addEventListener("foodTicketPurchased", clickEvent => {
+        contentTargetFood.innerHTML += `
+        <div class="food">foods</div>
         `
     })
 };

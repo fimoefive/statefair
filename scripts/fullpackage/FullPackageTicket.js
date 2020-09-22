@@ -7,7 +7,7 @@ const eventHub = document.querySelector(".state-fair");
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "fullPackageTicket") {
-        const fullPackageEvent = new CustomEvent("fullPacageTicketPurchased", {
+        const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased", {
             detail: {
                 ticketPurchased: clickEvent.target.value
             }
@@ -18,11 +18,11 @@ eventHub.addEventListener("click", clickEvent => {
 
 
 export const fullPackageTicketHolder = () => {
-    eventHub.addEventListener("fullPackageTicket", clickEvent => {
-        contentTargetGame.innerHTML += `<div class="game"></div>`
-        contentTargetFood.innerHTML += `<div class="food"></div>`
-        contentTargetRide.innerHTML += `<div class="rides"></div>`
-        contentTargetSideShow.innerHTML += `<div class="side-show"></div>`
-        contentTargetFull.innerHTML += `<div class="full-package></div>`
+    eventHub.addEventListener("fullPackageTicketPurchased", clickEvent => {
+        contentTargetGame.innerHTML += `<div class="game">game</div>`
+        contentTargetFood.innerHTML += `<div class="food">food</div>`
+        contentTargetRide.innerHTML += `<div class="rides">ride</div>`
+        contentTargetSideShow.innerHTML += `<div class="side-show">sideshow</div>`
+    contentTargetFull.innerHTML += `<div class="full-package">full package</div>`
     })
 };
